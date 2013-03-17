@@ -1,4 +1,5 @@
 import init.p920.usb.rc
+import init.b2g.rc
 
 on early-init
     mkdir /storage 0775 root system
@@ -12,6 +13,7 @@ on early-init
     symlink /storage/sdcard /sdcard
     symlink /storage/sdcard /mnt/sdcard
     symlink /storage/sdcard /storage/sdcard0
+
 on init
 
 sysclktz 0
@@ -35,6 +37,11 @@ loglevel 3
     chmod 0777 /dev/pcmC0D0p
     chmod 0777 /dev/controlC0
     chmod 0777 /dev/timer
+
+### B2G Directorys
+    chmod 0755 /system/b2g/b2g
+    chmod 0755 /system/b2g/updater
+    chmod 0755 /system/b2g/plugin-container
 
 ### LGE STUFFS
     chown root radio /proc/cmdline
