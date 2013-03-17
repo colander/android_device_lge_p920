@@ -6,7 +6,7 @@ $(call inherit-product, device/common/gps/gps_eu.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lge/p920/overlay
 
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+#$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
